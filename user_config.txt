@@ -1,2 +1,3 @@
 username=my_new_user
+password=my_password123
 public_key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQ..."

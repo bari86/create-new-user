@@ -2,16 +2,16 @@
 
 This script is to automate the adding new user to the system.
 
-First make a folder for the script.
-
-```
-mkdir new-user-script && cd new-user-script
-```
-
-Then copy this repo
+Copy this repo.
 
 ```
 git clone https://github.com/bari86/create-new-user.git
+```
+
+Enter the folder.
+
+```
+cd create-new-user
 ```
 
 Chmod the file for security.
@@ -30,6 +30,7 @@ The `user_config.txt` should look something like this.
 
 ```
 username=my_new_user
+password=my_password123
 public_key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQ..."
 ```
 
@@ -37,5 +38,5 @@ Then run the script using command below. The script will automatically delete th
 
 
 ```
-./create_user.sh
+bash create_user.sh
 ```

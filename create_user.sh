@@ -3,9 +3,12 @@
 # Read the public key from the configuration file
 source user_config.txt
 
-# Function to create a new user with public key authentication
+# Function to create a new user with password (required for sudoer) and public key authentication
 create_user() {
-    useradd -m "$username"   # -m creates the home directory for the user
+    useradd -m /bin/bash "$username"   # -m creates the home directory for the user
+
+    # Set the password for the new user
+    echo "$username:$password" | chpasswd
 
     # Create the .ssh directory and authorized_keys file with appropriate permissions
     mkdir -p "/home/$username/.ssh"
@@ -20,7 +23,7 @@ create_user() {
 create_user
 
 # Remove public key from the configuration file
-# rm user_config.txt
+rm user_config.txt
 
 # Switch to the newly created user
 su "$username"
