@@ -1,0 +1,2 @@
+username=my_new_user
+public_key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQ..."
